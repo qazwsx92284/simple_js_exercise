@@ -1,0 +1,11 @@
+key concepts covered 
+
+
+e.preventDefault();
+addEventListener
+this.elements.username;
+              (name of input)
+form.elements.username.value;
+
+.append();
+li.append(username.value);
