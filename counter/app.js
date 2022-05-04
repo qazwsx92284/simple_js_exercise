@@ -1,22 +1,30 @@
 const number = document.querySelector("#counter");
-const deBtn = document.querySelector("#decrease");
-const resetBtn = document.querySelector("#reset");
-const inBtn = document.querySelector("#increase");
-
+const btns = document.querySelectorAll(".btn");
 
 let num_count = 0;
-function increaseNum1() {
-    number.parse
-    number.textContent += 1;
 
-}
-const increaseNum = () => {
-    num_count += 1;
-    number.textContent = num_count;
-}
-inBtn.addEventListener('click', increaseNum);
+// const increaseNum = () => {
+//     num_count += 1;
+//     number.textContent = num_count;
+// }
+// inBtn.addEventListener('click', increaseNum);
 
-
-const calculate = (btn) => {
-    number.textContent += 1;
-}
+btns.forEach(function (btn) {
+    btn.addEventListener('click', function(e) {
+        const btn_classes = e.currentTarget.classList;
+        if(btn_classes.contains("increase")) {
+            num_count++;
+        } else if (btn_classes.contains("decrease")) {
+            num_count--;
+        } else {
+            num_count = 0;
+        }
+        if(num_count>0) 
+            number.style.color = "green";
+        if(num_count<0)
+            number.style.color = "red";
+        if(num_count === 0) 
+            number.style.color = "black";
+        number.textContent = num_count;
+    })
+})
