@@ -20,11 +20,11 @@ btns.forEach(function (btn) {
             num_count = 0;
         }
         if(num_count>0) 
-            number.style.color = "green";
+            number.style.color = "#4CAF50";
         if(num_count<0)
-            number.style.color = "red";
+            number.style.color = "#f44336";
         if(num_count === 0) 
-            number.style.color = "black";
+            number.style.color = "#555555";
         number.textContent = num_count;
     })
 })
