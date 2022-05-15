@@ -6,3 +6,19 @@
 
 const navToggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.links');
+
+navToggle.addEventListener('click', function() {
+    // console.log(links.classList);
+    // .classList : to get a list of classes upon which the element
+    // .contain : to check if the element has the class
+    // console.log(links.classList.contains('links'))
+    if(links.classList.contains("show-links")) {
+        links.classList.remove("show-links")
+    }
+    else {
+        links.classList.add("show-links")
+    }
+
+    // one line solution using .toggle
+    // links.classList.toggle("show-links");
+})
